@@ -1,3 +1,5 @@
+from algemene_functies import mijn_functie2 
+
 def aanbieding_1(smaak, prijs, korting):
     nieuwe_prijs = prijs * (1 - korting)
     return f"Vandaag in de aanbieding: emmertje ijs (1 liter) in de smaak {smaak}, van {prijs} euro voor {nieuwe_prijs} euro"
@@ -42,13 +44,10 @@ def gemiddelde(mijn_lijst):
 inkomsten_per_dag = [220, 430, 125, 160, 205, 90, 345]
 gemiddelde_inkomsten_per_dag = gemiddelde(inkomsten_per_dag)
 print(gemiddelde_inkomsten_per_dag)
-def laag_en_hoog(lijst):
-    return min(lijst), max(lijst)
-
-def meervoudig(invoer_lijst):
-    return laag_en_hoog(invoer_lijst)
-
-# Test de meervoudig functie met een voorbeeldlijst van integers
-voorbeeld_lijst = [10, 5, 3, 2, 1, 2, 9]
-resultaat_meervoudig = meervoudig(voorbeeld_lijst)
-print(resultaat_meervoudig)
+def combinatie(invoer_lijst_2):
+    print("Invoerlijst 2:", invoer_lijst_2)
+    korte_lijst = laag_en_hoog(invoer_lijst_2)
+    print("Korte lijst na laag_en_hoog:", korte_lijst)
+    resultaat_mijn_functie2 = mijn_functie2(korte_lijst)
+    print("Resultaat mijn_functie2:", resultaat_mijn_functie2)
+    return resultaat_mijn_functie2
